@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Lucida-Console';
+    src: url("Lucida\ Console\ Regular.ttf");
+}
+
+@font-face {
+    font-family: 'TheSansMono';
+    src: url('TheSansMonoCondensed_Extra_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Lucida-Italic';
+    src: url('Lucida\ Italic.otf');
+}
+
+body {
+    background-color: #302c3c;
+}
+
+.title {
+    font-family: 'Lucida-Console';
+    color: #9143b5;
+    text-align: center;
+    font-size: 50px;
+}
+
+.motto {
+    font-family: 'Lucida-Console';
+    color: #9143b5;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+}
+
+.motto-dc {
+    font-family: 'Lucida-Console';
+    color: #9143b5;
+    position: relative;
+    bottom: 27px;
+    text-align: center;
+    font-size: 10px;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.sc {
+    min-height: 20px;
+    min-width: 20px;
+    max-height: 10px;
+    max-width: 10px;
+    width: 3%;
+    top: 10px;
+}
+
+.bx {
+    border-radius: 5px;
+    background-color: #9143b5;
+}
+
+.gh{
+    position: relative;
+    left: 44%;
+    bottom: 290px;
+    width: 100px;
+    height: 50px;
+    opacity: 0;
+    
+}
+
+.fb {
+    position: relative;
+    left: 47%;
+    bottom: 355px;
+    width: 100px;   
+    height: 50px;
+    opacity: 0;
+}
+.fb-txt {
+    font-family: 'TheSansMono';
+    color:  #c988e3;
+    font-size: 15px;
+    position: relative;
+    bottom: -10px;
+    text-align: center;
+}
+
+.fb-ds {
+    font-family: 'Lucida-Console';
+    color:  #c988e3;
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+    text-align: center;
+}
+.gh-txt {
+    font-family: 'TheSansMono';
+    color:  #c988e3;
+    font-size: 15px;
+    position: relative;
+    bottom: -10px;
+    text-align: center;
+}
+
+@keyframes fade-out {    
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fade-in {    
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.gh-ds {
+    font-family: 'Lucida-Console';
+    color:  #c988e3;
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+    text-align: center;
+}
+
+.fade-out {
+    animation: fade-out 0.1s;
+}
+
+.fade-in {
+    animation: fade-in 0.1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.ttl {
+    font-family: 'Lucida-Console';
+    color: #9143b5;
+    position: relative;
+    left: 25%;
+    top: 30px;
+    font-size: 30px;
+}
+
+.rblx-cn {
+    border-radius: 5px;
+    background-color: #9143b5;
+    position: relative;
+    left: 25%;
+    top: 15px;
+    width: 500px;
+    height: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 120px;
+    right: 10%;
+}
+
+.rblx-ttl {
+    font-family: 'TheSansMono';
+    color:  #c988e3;
+    font-size: 15px;
+    position: relative;
+    bottom: 5px;
+    left: 3%;
+    text-align: left;
+}
+
+.rblx-desc {
+    font-family: 'Lucida-Console';
+    color:  #c988e3;
+    font-size: 9px;
+    position: relative;
+    bottom: 20px;
+    left: 3%;
+    text-align: left;
+}
+
+.rblx-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game-cn {
+    border-radius: 5px;
+    background-color: #9143b5;
+    position: relative;
+    left: 25%;
+    top: 450px;
+    width: 500px;
+    height: 50px;
+}
+
+.arrow-0 {
+    width: 7%;
+    position: relative;
+    bottom: 160px;
+    left: 30px;
+    visibility: hidden;
+}
+
+.arrow-1 {
+    width: 7%;
+    position: relative;
+    bottom: 160px;
+    left: 390px;
+}
+
+.chrm {
+    text-align: center;
+    font-family: 'Lucida-Console';
+    position: relative;
+    font-size: 14px;
+    top: 730px;
+    color:  #9143b5;
+    padding: 20px;
+}
+
+
+html {
+    overflow-x: hidden;
+  }
+
+
+.card {
+    width: 35%;
+    border-radius: 10px;
+    border: 3px solid #9143b5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 420px) {
+    html, body {
+        height: 100%;
+    }
+
+    
+}

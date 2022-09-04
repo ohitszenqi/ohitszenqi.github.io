@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Zenqi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3 class="title">zenqi void.</h3>
+    <div class="container">
+        <div class="socials"> 
+            <img class="sc github" src="github.png">
+            
+            <img class="sc facebook" src="facebook.png">
+        </div>
+        <h3 class="motto">Motto</h3>
+        <h3 class="motto-dc">“Intelligence is the ability to adapt to change.”</h3>
+        <img class="card" src="card.jpg">
+        <div class="cnd">
+            <div class="bx gh">
+                <h3 class="gh-txt">@ohitszenqi</h3>
+                <h3 class="gh-ds">github</h3>
+            </div>
+            <div class="bx fb">
+                <h3 class="fb-txt">@Sean</h3>
+                <h3 class="fb-ds">facebook</h3>
+            </div>
+        </div>
+        <div class="projects">
+            <h3 class="ttl">Projects</h3>
+            <div class="rblx-cn">
+                <h3 class="rblx-ttl">VoidBlox</h3>
+                <h3 class="rblx-desc">A Roblox information fetcher Discord bot that can fetch "Users, Places, and Avatars"</h3>
+                <img class="rblx-img" src="rblx.jpg">
+            </div>
+
+            <div class="game-cn">
+                <h3 class="rblx-ttl">Filipino Nextbots</h3>
+                <h3 class="rblx-desc">A roblox game inspired by Garry's Mod but with a filipino nextbots</h3>
+                <img class="rblx-img" id="hehe" src="./pictures/0.png">
+                <img class="arrow-0" src="arrow0.png">
+                <img class="arrow-1" src="arrow1.png">
+            </div>
+
+            <h3 class="chrm">ddsdsd</h3>
+
+            
+        </div>
+    </div>
+    <script>
+        $('.github').mouseenter(function() {
+            $('.gh').addClass('fade-in')
+        })
+
+        $('.gh').on('animationend', function() {
+            if ($(this).hasClass('fade-in')) {
+                $(this).css('opacity', 1)
+                $(this).removeClass('fade-in')
+            } else if ($(this).hasClass('fade-out')) {
+                $(this).css('opacity', 0)
+                $(this).removeClass('fade-out')
+            }
+        })
+
+        $('.github').mouseleave(function() {
+            $('.gh').addClass('fade-out')
+        })
+
+        $('.github').click(function() {
+            window.open('https://github.com/ohitszenqi', '_blank').focus()
+        })
+
+
+        // Facebook
+
+        $('.facebook').mouseenter(function() {
+            $('.fb').addClass('fade-in')
+        })
+
+        $('.fb').on('animationend', function() {
+            if ($(this).hasClass('fade-in')) {
+                $(this).css('opacity', 1)
+                $(this).removeClass('fade-in')
+            } else if ($(this).hasClass('fade-out')) {
+                $(this).css('opacity', 0)
+                $(this).removeClass('fade-out')
+            }
+        })
+
+        $('.facebook').mouseleave(function() {
+            $('.fb').addClass('fade-out')
+        })
+
+        $('.facebook').click(function() {
+            window.open('https://www.facebook.com/sean.ariate', '_blank').focus()
+        })
+
+        const pics = [
+            './pictures/0.png',
+            './pictures/1.png',
+            './pictures/2.png',
+            './pictures/3.png',
+            './pictures/4.png',
+            './pictures/5.png',
+            './pictures/6.png',
+            './pictures/7.png',
+            './pictures/8.png',
+            './pictures/9.png',
+        ]
+
+        let index = 0
+        $('.arrow-1').click(function() {
+            const cpic = $('#hehe')
+            const arrow1 = $('.arrow-1')
+            const arrow0 = $('.arrow-0')
+            const chrm = $('.chrm')
+            if (cpic.attr('src') === pics[0]) {
+                arrow0.css('visibility', 'visible')
+            }
+
+            if (cpic.attr('src') !== pics[9]) {
+                index += 1
+                $('#hehe').attr('src', pics[index])
+            }
+
+            if (cpic.attr('src') === pics[9]) {
+                arrow1.css('visibility', 'hidden')
+                chrm.css('top', '760px')
+                
+            }
+
+            if (cpic.attr('src') !== pics[0]) {
+                arrow0.css('visibility', 'visible')
+            }
+        })
+
+        $('.arrow-0').click(function() {
+            const cpic = $('#hehe')
+            const chrm = $('.chrm')
+            const arrow1 = $('.arrow-1')
+            const arrow0 = $('.arrow-0')
+            if (cpic.attr('src') === pics[0]) {
+                arrow0.css('visibility', 'visible')
+            }
+
+            if (cpic.attr('src') !== pics[0]) {
+                index -= 1
+                $('#hehe').attr('src', pics[index])
+            }
+
+            if (cpic.attr('src') === pics[0]) {
+                arrow0.css('visibility', 'hidden')
+            } else {
+                arrow0.css('visibility', 'visible')
+            }
+
+            if (cpic.attr('src') !== pics[9]) {
+                arrow1.css('visibility', 'visible')
+                chrm.css('top', '730px')
+            }
+        })
+
+
+        $(document).ready(function() {
+            const chrm = $('.chrm')
+            let today = new Date();
+            let christmasYear = today.getFullYear();
+
+            if (today.getMonth() == 11 && today.getDate() > 25) {
+            christmasYear = christmasYear + 1;
+            }
+
+            let christmasDate = new Date(christmasYear, 11, 25);
+            let dayMilliseconds = 1000 * 60 * 60 * 24;
+
+            let remainingDays = Math.ceil(
+            (christmasDate.getTime() - today.getTime()) /
+            (dayMilliseconds)
+            );
+
+            chrm.text(remainingDays + " Days before christmas!    ")
+        })
+    </script>
+</body>
+</html>
