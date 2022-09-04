@@ -60,7 +60,7 @@
             isMobile = true;
         }
 
-        if (!isMobile) {
+        if (isMobile === false) {
             $('.github').mouseenter(function() {
                 $('.gh').addClass('fade-in')
             })
