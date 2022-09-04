@@ -65,7 +65,7 @@ body {
 .gh{
     position: relative;
     left: 44%;
-    bottom: 290px;
+    bottom: 110px;
     width: 100px;
     height: 50px;
     opacity: 0;
@@ -75,7 +75,7 @@ body {
 .fb {
     position: relative;
     left: 47%;
-    bottom: 355px;
+    bottom: 175px;
     width: 100px;   
     height: 50px;
     opacity: 0;
@@ -159,7 +159,7 @@ body {
     flex-direction: column;
     position: relative;
     bottom: 120px;
-    right: 10%;
+    
 }
 
 .rblx-ttl {
